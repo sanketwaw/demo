@@ -1,4 +1,8 @@
-From tomcat:8-jre8
+From tomcat:9.0
 
-COPY target/demo.war /usr/local/tomcat/webapps/demo.war
-Expose 8090
+COPY target/demo.war /usr/local/tomcat/webapps/
+
+Expose 8080
+
+CMD ["catalina.sh", "run"]
+
